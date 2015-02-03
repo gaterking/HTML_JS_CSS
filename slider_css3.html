@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HTML5/CSS3 Slider</title>
+  <style type="text/css">
+  	.slider{height: 480px; width: 600px; position: relative;}
+  	.sliderBox>input[type=radio]{
+  		position: absolute;
+  		top:24px;
+  		left:50%;
+  		width: 16px;
+  		margin: 2px;
+  		z-index: 0;
+  	}
+  	.sliderBox>label{
+  		height:16px;
+  		width:16px;
+  		background: #cccccc;
+  		cursor: pointer;
+  		z-index:10;
+  		position: absolute;
+  		left:50%;
+  		top:24px;
+  		-webkit-border-radius:50%;
+  		-moz-border-radius:50%;
+  		border-radius: 50%;  	}
+  	#sliderIndex_0{margin-left: -38px;}
+  	#sliderIndex_1{margin-left: -18px;}
+  	#sliderIndex_2{margin-left: 2px;}
+  	#sliderIndex_3{margin-left: 22px;}
+  	.sliderBox>label[for=sliderIndex_0]{margin-left: -38px;}
+  	.sliderBox>label[for=sliderIndex_1]{margin-left: -18px;}
+  	.sliderBox>label[for=sliderIndex_2]{margin-left: 2px;}
+  	.sliderBox>label[for=sliderIndex_3]{margin-left: 22px;}
+  	#sliderIndex_0:checked~.imgBox{left:0;opacity:0.8;}
+  	#sliderIndex_1:checked~.imgBox{left:-100%;}
+  	#sliderIndex_2:checked~.imgBox{left:-200%;opacity:0.8;}
+  	#sliderIndex_3:checked~.imgBox{left:-300%;}
+  	.sliderBox{
+  		height: 100%;
+  		width: 100%;
+  		overflow: hidden;
+  		position: relative;
+  	}
+  	.imgBox{
+  		width: 400%;
+  		position: absolute;
+  		transition:2s ease;
+  	}
+  	.imgBox img{
+  		height: 480px;
+  		width:600px;
+  		float: left;
+  	}
+  </style>
+</head>
+<body>
+<div class="slider">
+	<div class="sliderBox">
+
+		<input type="radio" name="sliderIndex" id="sliderIndex_0" checked />
+		<label for="sliderIndex_0"></label>
+		<input type="radio" name="sliderIndex" id="sliderIndex_1"/>
+		<label for="sliderIndex_1"></label>
+		<input type="radio" name="sliderIndex" id="sliderIndex_2"/>
+		<label for="sliderIndex_2"></label>
+		<input type="radio" name="sliderIndex" id="sliderIndex_3"/>
+		<label for="sliderIndex_3"></label>
+
+		<div class="imgBox">
+			<img src="imgs/1.jpg" alt="1"/>
+			<img src="imgs/2.jpg" alt="2"/>
+			<img src="imgs/3.jpg" alt="3"/>
+			<img src="imgs/4.jpg" alt="4"/>
+		</div>
+	</div>
+</div>
+<body>
+</body>
+</html>
